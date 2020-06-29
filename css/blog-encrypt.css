@@ -25,6 +25,7 @@
   font-size: 20px;
   border-bottom: 1px solid #d5d5d5;
   text-indent: 10px;
+  background: rgba(255,255,255,0);
 }
 .hbe-input-container input::-moz-placeholder {
   opacity: 0;
