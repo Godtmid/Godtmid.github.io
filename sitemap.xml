@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://godtmid.github.io/%E9%98%BF%E9%87%8C%E5%9B%BE%E5%BA%8A/index.html</loc>
+    
+    <lastmod>2020-07-04T14:12:20.176Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://godtmid.github.io/album/index.html</loc>
+    
+    <lastmod>2020-07-04T14:11:25.820Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://godtmid.github.io/2020/07/03/vipParseAPI/</loc>
     
     <lastmod>2020-07-04T01:25:19.923Z</lastmod>
@@ -33,13 +47,6 @@
     <loc>https://godtmid.github.io/2020/06/20/springboot/</loc>
     
     <lastmod>2020-06-27T02:46:39.056Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://godtmid.github.io/album/index.html</loc>
-    
-    <lastmod>2020-06-27T02:03:55.643Z</lastmod>
     
   </url>
   
