@@ -1169,7 +1169,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ebb590;
+  background: #ffe7df;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2552,7 +2552,7 @@ ul.breadcrumb li + li:last-child {
 }
 @media screen and (min-width: 1200px) {
   body {
-    background-image: url("/images/background.jpg");
+    background-image: url("https://ae01.alicdn.com/kf/H3144398ff09d4e349d5807239b193d5ad.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 50% 50%;
