@@ -1169,7 +1169,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #c99ce9;
+  background: #ffbfd2;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2550,17 +2550,15 @@ ul.breadcrumb li + li:last-child {
 .links-of-blogroll-item {
   padding: 0;
 }
-@media screen and (min-width: 1200px) {
-  body {
-    background-image: url("https://ae01.alicdn.com/kf/H1ac20b0c9aee4d458f15779e5c341b85f.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: 50% 50%;
-    background-size: 100% 100%;
-  }
-  #footer a {
-    coler: #eee;
-  }
+body {
+  background-image: url("https://ae01.alicdn.com/kf/H1ac20b0c9aee4d458f15779e5c341b85f.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+#footer a {
+  coler: #eee;
 }
 @font-face {
 	font-family: iconfont;
