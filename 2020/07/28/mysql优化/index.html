@@ -21,17 +21,20 @@
     var CONFIG = {"hostname":"godtmid.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="https://godtmid.github.io/categories/index.html">
+  <meta name="description" content="not in和in not in优化：联表，b表根据条件查询出要在a表筛掉的记录id,a表左联c表并根据c表id为null去掉id不为null的记录。 1234567select a.* from aleft join (	select id from b where [condition]) c on c.id &#x3D; a.idwhere c.id is null[condition]">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mysql优化">
+<meta property="og:url" content="https://godtmid.github.io/2020/07/28/mysql%E4%BC%98%E5%8C%96/index.html">
 <meta property="og:site_name" content="Godtmid">
+<meta property="og:description" content="not in和in not in优化：联表，b表根据条件查询出要在a表筛掉的记录id,a表左联c表并根据c表id为null去掉id不为null的记录。 1234567select a.* from aleft join (	select id from b where [condition]) c on c.id &#x3D; a.idwhere c.id is null[condition]">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-06-18T13:20:38.000Z">
-<meta property="article:modified_time" content="2020-06-18T13:21:07.595Z">
+<meta property="article:published_time" content="2020-07-28T13:29:05.000Z">
+<meta property="article:modified_time" content="2020-07-28T13:45:45.545Z">
 <meta property="article:author" content="天蓝蓝">
+<meta property="article:tag" content="SQL优化">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://godtmid.github.io/categories/">
+<link rel="canonical" href="https://godtmid.github.io/2020/07/28/mysql%E4%BC%98%E5%8C%96/">
 
 
 <script id="page-configurations">
@@ -39,13 +42,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>categories | Godtmid
-</title>
+  <title>mysql优化 | Godtmid</title>
   
 
 
@@ -195,51 +197,141 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
-          <div class="content page posts-expand">
+          <div class="content post posts-expand">
             
 
     
-    
-    
-    <div class="post-block" lang="zh-CN">
-      <header class="post-header">
-
-<h1 class="post-title" itemprop="name headline">categories
-</h1>
-
-<div class="post-meta">
   
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://godtmid.github.io/2020/07/28/mysql%E4%BC%98%E5%8C%96/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/tx.jpg">
+      <meta itemprop="name" content="天蓝蓝">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Godtmid">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          mysql优化
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-07-28 21:29:05 / 修改时间：21:45:45" itemprop="dateCreated datePublished" datetime="2020-07-28T21:29:05+08:00">2020-07-28</time>
+            </span>
+
+		  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/MySQL/" itemprop="url" rel="index"><span itemprop="name">MySQL</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/MySQL/SQL%E4%BC%98%E5%8C%96/" itemprop="url" rel="index"><span itemprop="name">SQL优化</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>309</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <blockquote>
+<h2 id="not-in和in"><a href="#not-in和in" class="headerlink" title="not in和in"></a>not in和in</h2></blockquote>
+<p>not in优化：联表，b表根据条件查询出要在a表筛掉的记录id,a表左联c表并根据c表id为null去掉id不为null的记录。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">select a.* from a</span><br><span class="line">left join </span><br><span class="line">(</span><br><span class="line">	select id from b where [condition]</span><br><span class="line">) c on c.id &#x3D; a.id</span><br><span class="line">where c.id is null</span><br><span class="line">[condition]</span><br></pre></td></tr></table></figure>
+
+<p>in优化：使用FIND_IN_SET(str,strlist)函数，传参字符串strlist如“1,15,35,841,51”,str为要条件字段。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from a where FIND_IN_SET(id,&quot;1,15,35,841,51&quot;)</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div>对您有用，请不吝打赏.</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="天蓝蓝 微信支付">
+        <p>微信支付</p>
+      </div>
+
+  </div>
 </div>
 
-</header>
 
-      
-      
-      
-      <div class="post-body">
-          <div class="category-all-page">
-            <div class="category-all-title">
-              目前共计 14 个分类
-            </div>
-            <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Java/springboot/">springboot</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">多线程</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/%E5%91%BD%E4%BB%A4/">命令</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySQL/">MySQL</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/MySQL/SQL%E4%BC%98%E5%8C%96/">SQL优化</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E8%A6%81%E9%A2%86/">学习要领</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E9%A1%B9/">杂项</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%A7%86%E9%A2%91/">视频</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%A7%86%E9%A2%91/vip%E8%A7%A3%E6%9E%90/">vip解析</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%98%85%E8%AF%BB/">阅读</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%98%85%E8%AF%BB/%E6%82%AC%E7%96%91/">悬疑</a><span class="category-list-count">1</span></li></ul></li></ul>
-            </div>
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/SQL%E4%BC%98%E5%8C%96/" rel="tag"># SQL优化</a>
           </div>
-        
-      </div>
-      
-      
-      
-    </div>
-    
 
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/07/26/%E6%82%AC%E7%96%91%E4%BD%9C%E5%93%81/" rel="prev" title="悬疑作品">
+      <i class="fa fa-chevron-left"></i> 悬疑作品
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
     
-    
-    
+  </article>
+  
+  
+  
+
 
 
           </div>
@@ -290,6 +382,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#not-in和in"><span class="nav-text">not in和in</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
